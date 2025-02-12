@@ -1,4 +1,4 @@
-# THIS IS A PUBLIC FORK.
+# THIS IS (for now, thanks LI) A PUBLIC FORK.
 ### Relevant:
   - [Sky T1 Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/sky-t1.pdf): That's this thing.
   - [LIMO Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/limo.pdf) and [GitHub](https://github.com/GAIR-NLP/LIMO/tree/main): 💅MOOD SETTER💅 - snr matters lots, less data is better, cognitive templates r gud.
