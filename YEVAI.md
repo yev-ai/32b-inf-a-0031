@@ -1,5 +1,7 @@
 ## THIS IS A PUBLIC FORK.
-[@mle](https://github.com/orgs/yev-ai/teams/mle) [@mlr](https://github.com/orgs/yev-ai/teams/mlr) Feel free to test and improve it. Do not use any of our ongoing R&D and don't push this model beyond:
+[@mle](https://github.com/orgs/yev-ai/teams/mle) [@mlr](https://github.com/orgs/yev-ai/teams/mlr) Feel free to test it, improve it, and submit contributions upstream.
+
+Do not use any of our ongoing R&D and don't push this model beyond:
   - 89.0 Math500
   - 46.0 AIME2024
   - 90.0 LiveCodeBench-Easy
