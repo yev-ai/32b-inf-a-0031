@@ -18,6 +18,6 @@ Do not use any of our ongoing R&D and don't push this model beyond:
   - 57.5 BFCL-v3
   - 80.0 Arena-Hard
 
-If you want or need to push it beyond these limits, use DVC and provision from [@mlops](https://github.com/orgs/yev-ai/teams/mlops) in UltraCluster us-east-1:c. Relevant:
+If you're pushing it beyond these limits, use DVC and provision [@mlops](https://github.com/orgs/yev-ai/teams/mlops) in UltraCluster us-east-1:c. Relevant:
   - [LIMO Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/limo.pdf) and [GitHub](https://github.com/GAIR-NLP/LIMO/tree/main)
   - [Sky T1 Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/sky-t1.pdf)
