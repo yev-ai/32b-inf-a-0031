@@ -2,12 +2,12 @@
 ### Relevant:
   - [Sky T1 Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/sky-t1.pdf): That's this thing.
   - [LIMO Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/limo.pdf) and [GitHub](https://github.com/GAIR-NLP/LIMO/tree/main): Signal to noise ratio is important and less data is better.
-  - [S1 Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/s1.pdf): Don't use shit data and keep doing the basic prompt rewrites / appends that our runtimes do.
+  - [COAT Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/coat.pdf): What CoT should've been, MCTS memory bolt-on, larger token search space without more data.
+  - [SLM COT Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/slm-cot.pdf): Shocker, distilling process beats distilling answers and adversarial fine-tuning stops overfitting.
+ - [S1 Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/s1.pdf): Don't use shit data and keep doing the basic prompt rewrites / appends that our runtimes do.
   - [ReasonFlux Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/reason-flux.pdf): Same theme, quality data / cognitive templates / hierarchical reinforcement learning seqs.
   - [SGFT Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/slm-guidance.pdf): SLMs continue to dominate as domain experts, this is conceptually similar to our orchestrator tbh.
-  - [COAT Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/coat.pdf): What CoT should've been, MCTS memory bolt-on, larger token search space without more data.
   - [Context n Math Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/context-math-reason.pdf): Thing that further helps us purge shit data called LMS3. We like less, and we like better.
-  - [SLM COT Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/slm-cot.pdf): Shocker, distilling process beats distilling answers and adversarial fine-tuning stops overfitting.
 
 
 ### For the lulz
