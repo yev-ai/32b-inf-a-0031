@@ -12,7 +12,7 @@
 
 ### For the lulz
   - [DSR1 Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/dsr1.pdf): Nothing new. Read this if you want a free 6-pack. Recommended for friday night bingo. 
-  - [TAD LLM](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/tad-llm.pdf): How to get shit data. read it, have a laugh, recommend it to our competitors. /popcorn
+  - [TAD LLM](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/tad-llm.pdf): How to get shit data - read it, laugh, go convince our competitors to do this for a bonus.
 
 
 #
