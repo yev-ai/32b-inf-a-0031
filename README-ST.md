@@ -34,9 +34,9 @@
 # Getting Started
 
 We open source the code and scripts we used for data curation, training, and evaluation for Sky-T1-32B-Preview, you can find more details in each directory.
-- [`recipes`](./recipes/): Recipes - data curation steps and training strategies - for building our models `Sky-T1-32B-Flash` and `Sky-T1-32B-Preview`. 
-- [`skythought/skythought_evals`](./skythought/skythought_evals/): Our data generation and evaluation library. 
-- [`skythought/train`](./skythought/train/): Training scripts for Sky-T1. We use [Llama-Factory](https://github.com/hiyouga/LLaMA-Factory) to perform training. 
+- ``recipes``: Recipes - data curation steps and training strategies - for building our models `Sky-T1-32B-Flash` and `Sky-T1-32B-Preview`. 
+- ``skythought/skythought_evals``: Our data generation and evaluation library. 
+- ``skythought/train``: Training scripts for Sky-T1. We use [Llama-Factory](https://github.com/hiyouga/LLaMA-Factory) to perform training. The model was trained for 3 epochs with a learning rate of 1e-5 and a batch size of 96. Our model training was completed in 19 hours on 8 H100 GPUs using DeepSpeed Zero-3 offloading, costing approximately $450 as per Lambda Cloud pricing. 
 
 
 # Evaluation
@@ -86,7 +86,10 @@ Following, we show our evaluation results for the Sky-T1-32B-Preview model acros
 | GPQA-Diamond         | 56.8                    | 45.5   | 52.5  | 75.2       |
 | OlympiadBench (Math, EN)    | 59.79	           | 46.74	| 62.17	 | 59.2      | 
 
+#### Results on non-reasoning benchmarks
+
 We also evaluate on non-reasoning benchmarks (these are benchmarks for instruction-following, QA, etc) to test whether the model has traded-off capability in other domains for better performance in reasoning-related benchmarks. 
+
 
 | Metric | Sky-T1-32B-Preview | Qwen-2.5-32B-Instruct | QwQ-32B-Preview | Eval Implementation |
 |---------|-------------------|---------------------|-----------------|-------------------|
@@ -100,55 +103,88 @@ We also evaluate on non-reasoning benchmarks (these are benchmarks for instructi
 | BFCL-v3 | 53.18 | **58.92** | 17.41 | [BFCL](https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard) |
 | Arena-Hard | **74.79** | 66.51 | 52.6 | [Arena-Hard-Auto](https://github.com/lmarena/arena-hard-auto) |
 
-| Acknowledgement |
-| --------------- |
+For more details, refer [here](./skythought/skythought_evals/base_instruct_evals.md).
 
+## Fully Open-source: Driving Progress Together
+We believe that open-source collaboration drives progress, and with Sky-T1-32B-Preview, we are fully committed to empowering the community. We open-source all details (i.e., data, codes, model weights) to enable the community to replicate and improve on our results *easily*:
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th style="background-color: #f2f2f2;"><div align="center">Sky-T1-32B-Preview</div></th>
+      <th><div align="center">STILL-2</div></th>
+      <th><div align="center">Journey</div></th>
+      <th><div align="center">QwQ</div></th>
+      <th><div align="center">o1</div></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Data</td>
+      <td style="background-color: #f2f2f2;"><div align="center">✅</div></td>
+      <td><div align="center">✅</div></td>
+      <td><div align="center">❌</div></td>
+      <td><div align="center">❌</div></td>
+      <td><div align="center">❌</div></td>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td style="background-color: #f2f2f2;"><div align="center">✅</div></td>
+      <td><div align="center">❌</div></td>
+      <td><div align="center">❌</div></td>
+      <td><div align="center">❌</div></td>
+      <td><div align="center">❌</div></td>
+    </tr>
+    <tr>
+      <td>Report</td>
+      <td style="background-color: #f2f2f2;"><div align="center">✅</div></td>
+      <td><div align="center">✅</div></td>
+      <td><div align="center">✅</div></td>
+      <td><div align="center">❌</div></td>
+      <td><div align="center">❌</div></td>
+    </tr>
+    <tr>
+      <td>Math domain</td>
+      <td style="background-color: #f2f2f2;"><div align="center">✅</div></td>
+      <td><div align="center">✅</div></td>
+      <td><div align="center">✅</div></td>
+      <td><div align="center">✅</div></td>
+      <td><div align="center">✅</div></td>
+    </tr>
+    <tr>
+      <td>Coding domain</td>
+      <td style="background-color: #f2f2f2;"><div align="center">✅</div></td>
+      <td><div align="center">❌</div></td>
+      <td><div align="center">❌</div></td>
+      <td><div align="center">✅</div></td>
+      <td><div align="center">✅</div></td>
+    </tr>
+    <tr>
+      <td>Model Weights</td>
+      <td style="background-color: #f2f2f2;"><div align="center">✅</div></td>
+      <td><div align="center">✅</div></td>
+      <td><div align="center">❌</div></td>
+      <td><div align="center">✅</div></td>
+      <td><div align="center">❌</div></td>
+    </tr>
+  </tbody>
+</table>
+
+# Citation
+The code in this repository is mostly described in the post below. Please consider citing this work if you find the repository helpful. 
+
+```bibtex
+@misc{sky_t1_2025,
+  author       = {NovaSky Team},
+  title        = {Sky-T1: Train your own O1 preview model within $450},
+  howpublished = {https://novasky-ai.github.io/posts/sky-t1},
+  note         = {Accessed: 2025-01-09},
+  year         = {2025}
+}
+```
+
+# Acknowledgement
 This work is done at [Berkeley Sky Computing Lab](https://sky.cs.berkeley.edu/), with the amazing compute support from [Lambda Labs](https://lambdalabs.com/service/gpu-cloud?srsltid=AfmBOop5FnmEFTkavVtdZDsLWvHWNg6peXtat-OXJ9MW5GMNsk756PE5), [Anyscale](https://www.anyscale.com/), and [Databricks](https://www.databricks.com/). We would like to express our gratitude for the valuable academic feedback and support from the [Still-2 Team](https://arxiv.org/pdf/2412.09413), and Junyang Lin from the [Qwen Team](https://qwenlm.github.io/).
 
-# From  Yevai
-This model fork is WIP and may be unstable. We make no quality or availability guarantees at this time.
-### Relevant:
-  - [Sky T1 Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/sky-t1.pdf): That's this thing.
-  - [LIMO Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/limo.pdf) and [GitHub](https://github.com/GAIR-NLP/LIMO/tree/main): 💅MOOD SETTER💅 - snr matters lots, less data is better, cognitive templates r gud.
-  - [COAT Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/coat.pdf): What CoT should've been, MCTS memory bolt-on, larger token search space without more data.
-  - [SLM COT Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/slm-cot.pdf): Shocker, distilling process beats distilling answers and adversarial fine-tuning stops overfitting.
- - [S1 Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/s1.pdf): Don't use shit data and keep doing the basic prompt rewrites / appends that our runtimes do.
-  - [ReasonFlux Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/reason-flux.pdf): Same theme, quality data / cognitive templates / hierarchical reinforcement learning seqs.
-  - [SGFT Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/slm-guidance.pdf): SLMs continue to dominate as domain experts, this is conceptually similar to our orchestrator tbh.
-  - [Context n Math Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/context-math-reason.pdf): Thing that further helps us purge shit data called LMS3. We like less, and we like better.
-
-
-### Just Because:
-  - [DSR1 Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/dsr1.pdf): Nothing new. Read this if you want a free 6-pack. Recommended for friday night bingo. 
-  - [TAD LLM](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/tad-llm.pdf): How to get shit data - read it, laugh, go convince our competitors to do this for a bonus.
-
-
-[@mle](https://github.com/orgs/yev-ai/teams/mle) [@mlr](https://github.com/orgs/yev-ai/teams/mlr) Feel free to test it, improve it, and submit contributions upstream.
-
-### But Seriously, Why?
-We're overdue for a public demo. Make it cool, don't implement our current SoTA R&D. Limiter table:
-
-| Metric Ceiling        | Sky-T1-32B-Preview | 32b-inf-a-0031 | 32b-inf-a-0032 |
-|-----------------------|---------------------|-------|---------------------|
-| Math500              | 86.40                    | 92.00 | N/A |
-| AIME2024             | 43.30                    | 50.00 | N/A |
-| LiveCodeBench-Easy   | 86.30                    | 92.00 | N/A |
-| LiveCodeBench-Medium | 56.80                    | 59.00 | N/A |
-| LiveCodeBench-Hard   | 17.90                    | 19.00 | N/A |
-| GPQA-Diamond         | 56.80                    | 75.00 | N/A |
-| OlympiadBench (Math, EN)    | 59.79	            | 62.00 | N/A |
-| MMLU (0 shot; no CoT) | 78.36 | 80.00 | N/A |
-| MMLU (5 shot; no CoT) | 82.46 | 85.00 | N/A |
-| ARC-C (0 shot; no CoT) | 49.49 | 65.00 | N/A |
-| IFEval | 75.79 | 80.00 | N/A |
-| LLM-as-a-Judge | 09.12 | 09.50 | N/A |
-| MGSM (0 shot; `direct`) | 33.00 | 45.00 | N/A |
-| MGSM (8-shot; `direct`) | 58.40 | 62.50 | N/A |
-| BFCL-v3 | 53.18 | 60.00 | N/A |
-| Arena-Hard | 74.79 | 80.00 | N/A |
-
-
-For now, all variants exceeding ceilings specified for 32b-inf-a-0031 belong in [32b-inf-a-0032](https://github.com/yev-ai/32b-inf-a-0032).
-
-Provision [@mlops](https://github.com/orgs/yev-ai/teams/mlops) in UltraCluster us-east-1:c. 
 
