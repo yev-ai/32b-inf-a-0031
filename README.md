@@ -27,7 +27,7 @@ We also evaluate on non-reasoning benchmarks (these are benchmarks for instructi
 
 
 
-# From  [Yevai](https://www.yev.ai/)
+# From  [Us](https://www.yev.ai/)
 **This model fork is currently WIP and may be unstable.**
 ### Relevant:
   - [LIMO Paper](https://github.com/yev-ai/32b-inf-a-0031/blob/main/papers/limo.pdf) and [GitHub](https://github.com/GAIR-NLP/LIMO/tree/main): 💅MOOD SETTER💅 - snr matters lots, less data is better, cognitive templates r gud.
