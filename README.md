@@ -1,5 +1,5 @@
 # From [SkyThought](https://github.com/NovaSky-AI/SkyThought)
-Following, we show our evaluation results for the Sky-T1-32B-Preview model across math, coding, and science benchmarks.
+Evaluation results for the Sky-T1-32B-Preview model across math, coding, and science benchmarks.
 
 | Metric                | Sky-T1-32B-Preview | Qwen-2.5-32B-Instruct | QwQ   | o1-preview |
 |-----------------------|---------------------|--------|-------|------------|
@@ -11,7 +11,7 @@ Following, we show our evaluation results for the Sky-T1-32B-Preview model acros
 | GPQA-Diamond         | 56.8                    | 45.5   | 52.5  | 75.2       |
 | OlympiadBench (Math, EN)    | 59.79	           | 46.74	| 62.17	 | 59.2      | 
 
-We also evaluate on non-reasoning benchmarks (these are benchmarks for instruction-following, QA, etc) to test whether the model has traded-off capability in other domains for better performance in reasoning-related benchmarks. 
+Evaluation on non-reasoning benchmarks (these are benchmarks for instruction-following, QA, etc) to test whether the model has traded-off capability in other domains for better performance in reasoning-related benchmarks. 
 
 | Metric | Sky-T1-32B-Preview | Qwen-2.5-32B-Instruct | QwQ-32B-Preview | Eval Implementation |
 |---------|-------------------|---------------------|-----------------|-------------------|
